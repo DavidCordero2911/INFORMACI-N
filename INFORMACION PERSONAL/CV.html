@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum - David Cordero Carrasco</title>
+  <style>
+    :root {
+      /* Colores base - modo oscuro */
+      --bg1: #1a1a2e;
+      --bg2: #16213e;
+      --bg3: #0f3460;
+      --text: #e6e6e6;
+      --subtext: #b8b8b8;
+      --accent: #4361ee;
+      --card-bg: linear-gradient(145deg, #2d3748 0%, #1f2937 100%);
+    }
+
+    body.light {
+      /* Colores base - modo claro */
+      --bg1: #eaf3ff;
+      --bg2: #dce9ff;
+      --bg3: #b9d2ff;
+      --text: #1a1a2e;
+      --subtext: #3a3a3a;
+      --accent: #3a0ca3;
+      --card-bg: linear-gradient(145deg, #ffffff 0%, #e4edff 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.4s, color 0.4s, border 0.4s;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 50%, var(--bg3) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, var(--bg3), var(--bg1));
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #4cc9f0, var(--accent));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--subtext);
+      margin-bottom: 1rem;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      background: rgba(67, 97, 238, 0.1);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .info {
+      text-align: left;
+      max-width: 400px;
+    }
+
+    .info p {
+      color: var(--subtext);
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--accent), #4cc9f0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .icon-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-3px);
+    }
+
+    .icon-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      padding: 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      background: linear-gradient(135deg, var(--accent), #3a0ca3);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(31, 41, 55, 0.4));
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      background: linear-gradient(135deg, var(--bg1), var(--bg3));
+      color: var(--subtext);
+    }
+
+    @media (max-width: 700px) {
+      .top-section {
+        flex-direction: column;
+      }
+      .info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>David Cordero Carrasco</h1>
+    <p class="subtitle">Técnico en Sistemas Microinformáticos y Redes</p>
+
+    <div class="top-section">
+      <div class="profile-photo" style="background-image: url('FOTO.jpg');"></div>
+
+      <div class="info">
+        <p><strong>Teléfono:</strong> 655 645 302</p>
+        <p><strong>Email:</strong> davidcorderocarrasco@gmail.com</p>
+        <p><strong>Dirección:</strong> Calle de los Banderilleros Nº16 1ºA</p>
+        <p><strong>Disponibilidad:</strong> Total</p>
+        <p><strong>Carnet de conducir:</strong> Sí, con vehículo propio</p>
+      </div>
+
+      <div class="icons">
+        <!-- Botón modo claro/oscuro -->
+        <div class="icon-btn" id="theme-toggle" title="Cambiar modo">
+          <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18 9 9 0 0 0 0-18zm0-2a11 11 0 1 1 0 22 11 11 0 0 1 0-22z"/></svg>
+        </div>
+        <!-- Botón descargar CV -->
+        <a class="icon-btn" href="CV - David Cordero Carrasco.pdf" target="_blank" title="Descargar CV">
+          <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18l-5.5 5.5h4v6h3v-6h4L12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>Me considero una persona con gran capacidad de aprendizaje, muchas ganas de trabajar, constante y aplicada. 
+         Soy un apasionado del deporte, tanto de verlo como de practicarlo, con buena capacidad para trabajar bajo presión 
+         y siempre dispuesto a ayudar.</p>
+    </div>
+
+    <div class="card">
+      <h2>Experiencia laboral</h2>
+      <ul>
+        <li><strong>AFT Informática (2025):</strong> 1 mes de prácticas en el área de mantenimiento.</li>
+        <li><strong>IES La Arboleda (2023):</strong> 3 meses de prácticas en mantenimiento informático.</li>
+        <li><strong>Hostelería:</strong> Experiencia como camarero y mantenimiento en discotecas BANANA y MARGARITA (El Puerto de Santa María).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Datos académicos</h2>
+      <ul>
+        <li><strong>Grado Superior en Desarrollo de Aplicaciones Web</strong> — IES Mar de Cádiz (2024 - Actualidad)</li>
+        <li><strong>Grado Medio en Sistemas Microinformáticos y Redes</strong> — IES Mar de Cádiz (2021 - 2023)</li>
+        <li><strong>Educación Secundaria Obligatoria</strong> — IES Pintor Juan Lara (2017 - 2021)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Idiomas</h2>
+      <ul>
+        <li><strong>Castellano:</strong> Nativo</li>
+        <li><strong>Inglés:</strong> Nivel intermedio (B1-B2)</li>
+        <li>Inmersiones lingüísticas en Dublín, Malta y Portugal (2022-2023)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Buena comunicación y liderazgo</li>
+        <li>Trabajo en equipo y bajo presión</li>
+        <li>Capacidad de aprendizaje rápido</li>
+        <li>Conocimientos básicos en HTML, CSS, Java y JavaScript</li>
+        <li>Gestión de hardware y software informático</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Más información</h2>
+      <ul>
+        <li>Vehículo propio</li>
+        <li>Disponibilidad total</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 David Cordero Carrasco | Currículum Online</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+    });
+  </script>
+</body>
+</html>
